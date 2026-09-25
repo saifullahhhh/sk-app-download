@@ -1,0 +1,1387 @@
+/* ========================================
+   PAGE
+======================================== */
+
+.download-page {
+  width: 100%;
+  min-height: 100vh;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 8%,
+      rgba(189, 30, 45, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 8% 95%,
+      rgba(189, 30, 45, 0.05),
+      transparent 32%
+    ),
+    #f5f5f6;
+}
+
+
+/* ========================================
+   BACKGROUND DECORATION
+======================================== */
+
+.background-circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.circle-one {
+  width: 520px;
+  height: 520px;
+
+  top: -290px;
+  right: -180px;
+
+  border: 80px solid rgba(189, 30, 45, 0.04);
+}
+
+.circle-two {
+  width: 400px;
+  height: 400px;
+
+  bottom: -250px;
+  left: 34%;
+
+  border: 65px solid rgba(189, 30, 45, 0.03);
+}
+
+.background-grid {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(17, 17, 17, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(17, 17, 17, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 44px 44px;
+
+  mask-image: radial-gradient(
+    circle at 50% 40%,
+    #000 0%,
+    transparent 70%
+  );
+}
+
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.page-container {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 690px;
+
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(17, 17, 17, 0.06);
+  border-radius: 32px;
+
+  box-shadow:
+    0 40px 100px rgba(24, 24, 24, 0.1),
+    0 12px 32px rgba(24, 24, 24, 0.05),
+    0 2px 6px rgba(24, 24, 24, 0.03);
+
+  animation:
+    pageEnter 0.9s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+
+/* ========================================
+   LEFT BRAND SECTION
+======================================== */
+
+.brand-section {
+  min-height: 690px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 52px 64px 45px;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(255, 255, 255, 0.14),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 8% 92%,
+      rgba(255, 255, 255, 0.08),
+      transparent 32%
+    ),
+    linear-gradient(
+      155deg,
+      #d42638 0%,
+      #b91627 48%,
+      #7d0d1a 100%
+    );
+}
+
+.brand-section::before {
+  content: "";
+
+  width: 440px;
+  height: 440px;
+
+  position: absolute;
+
+  top: -240px;
+  right: -220px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+.brand-section::after {
+  content: "";
+
+  width: 280px;
+  height: 280px;
+
+  position: absolute;
+
+  left: -160px;
+  bottom: -160px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+}
+
+
+/* ========================================
+   BRAND LOGO
+======================================== */
+
+.brand-logo {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  animation:
+    contentEnter 0.8s 0.12s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.brand-logo img {
+  width: 54px;
+  height: 54px;
+
+  padding: 7px;
+
+  flex-shrink: 0;
+
+  object-fit: contain;
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1;
+}
+
+.brand-name span {
+  margin-bottom: 4px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.brand-name strong {
+  color: #ffffff;
+
+  font-size: 19px;
+  font-weight: 650;
+}
+
+
+/* ========================================
+   BRAND CONTENT
+======================================== */
+
+.brand-content {
+  width: 100%;
+  max-width: 530px;
+
+  position: relative;
+  z-index: 2;
+
+  margin: auto 0;
+
+  animation:
+    contentEnter 0.9s 0.2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.brand-label {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 22px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.3px;
+}
+
+.brand-label::before {
+  content: "";
+
+  width: 16px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.brand-content h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(48px, 4vw, 66px);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -3px;
+}
+
+.brand-content h1 span {
+  color: #f7b6bd;
+}
+
+.brand-content > p {
+  max-width: 470px;
+
+  margin: 26px 0 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   FEATURES
+======================================== */
+
+.feature-row {
+  margin-top: 34px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.feature-check {
+  width: 23px;
+  height: 23px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+
+  box-shadow:
+    inset 0 1px 2px
+    rgba(255, 255, 255, 0.1);
+}
+
+
+/* ========================================
+   BRAND FOOTER
+======================================== */
+
+.brand-footer {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+
+/* ========================================
+   DOWNLOAD SIDE
+======================================== */
+
+.download-section {
+  min-height: 690px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 55px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      #ffffff 0%,
+      #fbfbfc 100%
+    );
+}
+
+
+/* ========================================
+   DOWNLOAD PANEL
+======================================== */
+
+.download-panel {
+  width: 100%;
+  max-width: 390px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  animation:
+    contentEnter 0.9s 0.3s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+
+/* ========================================
+   APP ICON
+======================================== */
+
+.app-icon {
+  width: 106px;
+  height: 106px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #f0f0f0;
+  border-radius: 28px;
+
+  box-shadow:
+    0 20px 44px rgba(189, 30, 45, 0.12),
+    0 6px 14px rgba(0, 0, 0, 0.04);
+}
+
+.app-icon img {
+  width: 74px;
+  height: 74px;
+
+  object-fit: contain;
+}
+
+
+/* ========================================
+   DOWNLOAD TEXT
+======================================== */
+
+.download-label {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 14px;
+
+  color: #bd1e2d;
+
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 2.2px;
+}
+
+.download-label::before,
+.download-label::after {
+  content: "";
+
+  width: 14px;
+  height: 1px;
+
+  background: rgba(189, 30, 45, 0.35);
+}
+
+.download-panel h2 {
+  margin: 0;
+
+  color: #171717;
+
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1.2px;
+}
+
+.download-description {
+  max-width: 315px;
+
+  margin: 14px auto 0;
+
+  color: #767676;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+
+/* ========================================
+   STORE BUTTONS
+======================================== */
+
+.store-buttons {
+  width: 100%;
+
+  margin-top: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+}
+
+.store-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  line-height: 0;
+
+  border-radius: 9px;
+
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.3s
+      cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.store-button img {
+  display: block;
+
+  width: 142px;
+  height: 47px;
+
+  object-fit: contain;
+}
+
+.store-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.store-button:active {
+  transform:
+    translateY(-1px)
+    scale(0.98);
+}
+
+.store-button:focus-visible {
+  outline: 2px solid #bd1e2d;
+  outline-offset: 5px;
+}
+
+
+/* ========================================
+   AVAILABILITY
+======================================== */
+
+.availability {
+  margin-top: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  color: #767676;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.availability-dot {
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  background: #24a148;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(36, 161, 72, 0.1);
+}
+
+
+/* ========================================
+   BOTTOM
+======================================== */
+
+.divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 29px 0 19px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ececec 50%,
+    transparent
+  );
+}
+
+.safe-download {
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  color: #a8a8a8;
+
+  font-size: 10px;
+  font-weight: 500;
+}
+
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+@keyframes contentEnter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .download-page {
+    padding: 30px;
+  }
+
+  .page-container {
+    width: 100%;
+
+    grid-template-columns:
+      1fr
+      0.85fr;
+  }
+
+  .brand-section {
+    padding:
+      45px
+      42px
+      40px;
+  }
+
+  .brand-content h1 {
+    font-size: 47px;
+
+    letter-spacing: -2px;
+  }
+
+  .download-section {
+    padding: 35px;
+  }
+
+  .store-buttons {
+    flex-direction: column;
+  }
+
+  .store-button img {
+    width: 150px;
+    height: auto;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-width: 0;
+    min-height: 100%;
+
+    overflow-x: hidden;
+  }
+
+  .download-page {
+    width: 100%;
+    min-width: 0;
+    min-height: 100svh;
+
+    display: block;
+
+    padding: 0;
+
+    overflow-x: hidden;
+
+    background: #f5f5f6;
+  }
+
+  .background-circle,
+  .background-grid {
+    display: none;
+  }
+
+
+  /* ========================================
+     MOBILE MAIN CONTAINER
+  ======================================== */
+
+  .page-container {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    min-height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: visible;
+
+    background: #f5f5f6;
+
+    border: 0;
+    border-radius: 0;
+
+    box-shadow: none;
+  }
+
+
+  /* ========================================
+     MOBILE BRAND SECTION
+  ======================================== */
+
+  .brand-section {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+
+    position: relative;
+
+    display: block;
+
+    padding:
+      max(26px, env(safe-area-inset-top))
+      22px
+      42px;
+
+    overflow: hidden;
+
+    border-radius:
+      0
+      0
+      30px
+      30px;
+  }
+
+  .brand-section::before {
+    width: 270px;
+    height: 270px;
+
+    top: -145px;
+    right: -135px;
+  }
+
+  .brand-section::after {
+    width: 180px;
+    height: 180px;
+
+    left: -100px;
+    bottom: -105px;
+  }
+
+
+  /* ========================================
+     MOBILE BRAND LOGO
+  ======================================== */
+
+  .brand-logo {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+  }
+
+  .brand-logo img {
+    width: 45px;
+    height: 45px;
+
+    padding: 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+  }
+
+  .brand-name {
+    min-width: 0;
+  }
+
+  .brand-name span {
+    margin-bottom: 3px;
+
+    font-size: 8px;
+    letter-spacing: 1.6px;
+  }
+
+  .brand-name strong {
+    font-size: 16px;
+  }
+
+
+  /* ========================================
+     MOBILE BRAND CONTENT
+  ======================================== */
+
+  .brand-content {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 44px 0 0;
+  }
+
+  .brand-label {
+    gap: 7px;
+
+    margin-bottom: 14px;
+
+    font-size: 8px;
+    letter-spacing: 1.7px;
+  }
+
+  .brand-label::before {
+    width: 12px;
+  }
+
+  .brand-content h1 {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 0;
+
+    font-size:
+      clamp(
+        34px,
+        10vw,
+        46px
+      );
+
+    line-height: 1.02;
+
+    letter-spacing: -1.6px;
+
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .brand-content h1 br {
+    display: none;
+  }
+
+  .brand-content h1 span {
+    display: block;
+
+    margin-top: 3px;
+  }
+
+  .brand-content > p {
+    width: 100%;
+    max-width: 390px;
+
+    margin: 18px 0 0;
+
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+
+  .feature-row,
+  .brand-footer {
+    display: none;
+  }
+
+
+  /* ========================================
+     MOBILE DOWNLOAD AREA
+  ======================================== */
+
+  .download-section {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+
+    flex: 1;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding:
+      26px
+      16px
+      calc(
+        30px +
+        env(safe-area-inset-bottom)
+      );
+
+    background: #f5f5f6;
+  }
+
+
+  /* ========================================
+     MOBILE DOWNLOAD CARD
+  ======================================== */
+
+  .download-panel {
+    width: 100%;
+    max-width: 430px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding:
+      29px
+      20px
+      22px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border:
+      1px solid
+      rgba(0, 0, 0, 0.05);
+
+    border-radius: 23px;
+
+    box-shadow:
+      0 12px 35px
+      rgba(0, 0, 0, 0.06);
+  }
+
+
+  /* ========================================
+     MOBILE APP ICON
+  ======================================== */
+
+  .app-icon {
+    width: 74px;
+    height: 74px;
+
+    margin:
+      0
+      0
+      20px;
+
+    border-radius: 20px;
+
+    box-shadow:
+      0 10px 25px
+      rgba(189, 30, 45, 0.09);
+  }
+
+  .app-icon img {
+    width: 52px;
+    height: 52px;
+  }
+
+
+  /* ========================================
+     MOBILE DOWNLOAD TEXT
+  ======================================== */
+
+  .download-label {
+    gap: 6px;
+
+    margin-bottom: 9px;
+
+    font-size: 8px;
+    letter-spacing: 1.8px;
+  }
+
+  .download-label::before,
+  .download-label::after {
+    width: 10px;
+  }
+
+  .download-panel h2 {
+    width: 100%;
+
+    font-size: 25px;
+    line-height: 1.15;
+    letter-spacing: -0.8px;
+  }
+
+  .download-description {
+    width: 100%;
+    max-width: 290px;
+
+    margin: 10px auto 0;
+
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+
+  /* ========================================
+     MOBILE STORE BUTTONS
+  ======================================== */
+
+  .store-buttons {
+    width: 100%;
+
+    margin-top: 23px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+  }
+
+  .store-button {
+    width: auto;
+    max-width: 100%;
+
+    display: inline-flex;
+
+    box-shadow: none;
+  }
+
+  .store-button img {
+    display: block;
+
+    width: 170px;
+    max-width: 100%;
+    height: auto;
+
+    object-fit: contain;
+  }
+
+  .store-button:hover {
+    transform: none;
+
+    box-shadow: none;
+  }
+
+  .store-button:active {
+    transform: scale(0.98);
+  }
+
+
+  /* ========================================
+     MOBILE AVAILABILITY
+  ======================================== */
+
+  .availability {
+    margin-top: 21px;
+
+    gap: 7px;
+
+    font-size: 10px;
+  }
+
+  .availability-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+
+  /* ========================================
+     MOBILE BOTTOM
+  ======================================== */
+
+  .divider {
+    width: 100%;
+
+    margin:
+      21px
+      0
+      16px;
+  }
+
+  .safe-download {
+    font-size: 9px;
+  }
+}
+
+
+/* ========================================
+   480PX MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .brand-section {
+    padding:
+      max(
+        24px,
+        env(safe-area-inset-top)
+      )
+      19px
+      36px;
+
+    border-radius:
+      0
+      0
+      26px
+      26px;
+  }
+
+  .brand-content {
+    margin-top: 38px;
+  }
+
+  .brand-content h1 {
+    font-size: 38px;
+    letter-spacing: -1.4px;
+  }
+
+  .brand-content > p {
+    max-width: 340px;
+
+    font-size: 12px;
+  }
+
+  .download-section {
+    padding:
+      22px
+      14px
+      calc(
+        26px +
+        env(safe-area-inset-bottom)
+      );
+  }
+
+  .download-panel {
+    padding:
+      25px
+      17px
+      20px;
+
+    border-radius: 20px;
+  }
+
+  .app-icon {
+    width: 70px;
+    height: 70px;
+
+    margin-bottom: 18px;
+  }
+
+  .app-icon img {
+    width: 49px;
+    height: 49px;
+  }
+
+  .download-panel h2 {
+    font-size: 23px;
+  }
+
+  .store-button img {
+    width: 165px;
+  }
+}
+
+
+/* ========================================
+   400PX MOBILE
+======================================== */
+
+@media (max-width: 400px) {
+  .brand-section {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .brand-content {
+    margin-top: 34px;
+  }
+
+  .brand-content h1 {
+    font-size: 34px;
+    letter-spacing: -1.1px;
+  }
+
+  .brand-content > p {
+    font-size: 11.5px;
+  }
+
+  .download-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .download-panel {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .app-icon {
+    width: 67px;
+    height: 67px;
+  }
+
+  .app-icon img {
+    width: 47px;
+    height: 47px;
+  }
+
+  .download-panel h2 {
+    font-size: 22px;
+  }
+
+  .download-description {
+    font-size: 11.5px;
+  }
+
+  .store-button img {
+    width: 155px;
+  }
+}
+
+
+/* ========================================
+   VERY SMALL MOBILE
+======================================== */
+
+@media (max-width: 350px) {
+  .brand-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .brand-content h1 {
+    font-size: 31px;
+  }
+
+  .brand-content > p {
+    font-size: 11px;
+  }
+
+  .download-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .download-panel h2 {
+    font-size: 20px;
+  }
+
+  .store-button img {
+    width: 145px;
+  }
+}
+
+
+/* ========================================
+   SHORT MOBILE SCREENS
+======================================== */
+
+@media (
+  max-width: 768px
+) and (
+  max-height: 700px
+) {
+  .brand-content {
+    margin-top: 28px;
+  }
+
+  .brand-section {
+    padding-bottom: 30px;
+  }
+
+  .download-section {
+    padding-top: 18px;
+  }
+
+  .download-panel {
+    padding-top: 22px;
+  }
+
+  .app-icon {
+    width: 64px;
+    height: 64px;
+
+    margin-bottom: 15px;
+  }
+
+  .app-icon img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .store-buttons {
+    margin-top: 19px;
+  }
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (
+  prefers-reduced-motion: reduce
+) {
+  .page-container,
+  .brand-logo,
+  .brand-content,
+  .download-panel {
+    animation: none;
+  }
+
+  .store-button {
+    transition: none;
+  }
+}
