@@ -1385,3 +1385,48 @@
     transition: none;
   }
 }
+/* ========================================
+   LIVESTOCK & MART BRANDING
+======================================== */
+
+.download-title-brand {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #bd1e2d;
+}
+
+@media (max-width: 768px) {
+  .brand-name strong {
+    white-space: nowrap;
+  }
+
+  .brand-content h1 span {
+    max-width: 420px;
+  }
+
+  .download-title-brand {
+    margin-top: 3px;
+  }
+}
+
+@media (max-width: 400px) {
+  .brand-name strong {
+    font-size: 14px;
+  }
+
+  .download-title-brand {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 350px) {
+  .brand-name strong {
+    font-size: 13px;
+  }
+
+  .download-title-brand {
+    font-size: 19px;
+  }
+}

@@ -17,49 +17,56 @@ function App() {
       {/* Background decoration */}
       <div className="background-circle circle-one" />
       <div className="background-circle circle-two" />
+      <div className="background-grid" />
 
       <div className="page-container">
 
         {/* =========================
-            LEFT SIDE
+            LEFT BRAND SECTION
         ========================= */}
         <section className="brand-section">
 
           <div className="brand-logo">
             <img
               src={skLogo}
-              alt="SK Livestock"
+              alt="SK Livestock & Mart"
             />
 
             <div className="brand-name">
               <span>SK</span>
-              <strong>Livestock</strong>
+              <strong>Livestock & Mart</strong>
             </div>
           </div>
 
           <div className="brand-content">
 
             <span className="brand-label">
-              SK LIVESTOCK MOBILE APP
+              SK LIVESTOCK & MEAT MART
             </span>
 
             <h1>
-              Everything
+              Everything Livestock.
               <br />
-              Livestock.
-              <span> One Platform.</span>
+              <span>Fresh Meat. One Platform.</span>
             </h1>
 
             <p>
-              Access livestock buying and selling,
-              market rates, opportunities, farm services
-              and more — wherever you are.
+              Buy and sell livestock, order fresh meat
+              from Meat Mart, check market rates,
+              discover opportunities, and access
+              livestock services — all in one place.
             </p>
 
             <div className="feature-row">
+
               <div className="feature-item">
                 <span className="feature-check">✓</span>
                 <span>Buy & Sell Livestock</span>
+              </div>
+
+              <div className="feature-item">
+                <span className="feature-check">✓</span>
+                <span>Fresh Meat Mart</span>
               </div>
 
               <div className="feature-item">
@@ -71,19 +78,20 @@ function App() {
                 <span className="feature-check">✓</span>
                 <span>Industry Opportunities</span>
               </div>
+
             </div>
 
           </div>
 
           <p className="brand-footer">
-            Pakistan&apos;s digital livestock ecosystem
+            Livestock & fresh meat, connected digitally.
           </p>
 
         </section>
 
 
         {/* =========================
-            DOWNLOAD PANEL
+            DOWNLOAD SECTION
         ========================= */}
         <section className="download-section">
 
@@ -92,7 +100,7 @@ function App() {
             <div className="app-icon">
               <img
                 src={skLogo}
-                alt=""
+                alt="SK Livestock & Mart"
               />
             </div>
 
@@ -101,12 +109,15 @@ function App() {
             </span>
 
             <h2>
-              Download SK Livestock
+              Download
+              <span className="download-title-brand">
+                SK Livestock & Mart
+              </span>
             </h2>
 
             <p className="download-description">
-              Choose your platform below and start
-              exploring the livestock ecosystem.
+              Choose your platform and get access to
+              livestock services and Meat Mart on the go.
             </p>
 
             <div className="store-buttons">
@@ -116,7 +127,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="store-button"
-                aria-label="Download SK Livestock on the App Store"
+                aria-label="Download SK Livestock & Mart on the App Store"
               >
                 <img
                   src={appStoreBadge}
@@ -129,7 +140,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="store-button"
-                aria-label="Get SK Livestock on Google Play"
+                aria-label="Get SK Livestock & Mart on Google Play"
               >
                 <img
                   src={googlePlayBadge}
@@ -150,7 +161,7 @@ function App() {
             <div className="divider" />
 
             <p className="safe-download">
-              Official SK Livestock application
+              Official SK Livestock & Mart application
             </p>
 
           </div>
