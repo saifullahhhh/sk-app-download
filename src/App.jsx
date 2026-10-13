@@ -1,8 +1,10 @@
+
 import './App.css'
 
 import skLogo from './assets/images/sk-logo.png'
 import appStoreBadge from './assets/images/app-store.png'
 import googlePlayBadge from './assets/images/google-play.png'
+import googleMapsIcon from './assets/images/google-maps.png'
 
 const APP_STORE_URL =
   'https://apps.apple.com/pk/app/s-k-livestock/id6754009240'
@@ -10,22 +12,20 @@ const APP_STORE_URL =
 const GOOGLE_PLAY_URL =
   'https://play.google.com/store/apps/details?id=com.sk.livestock'
 
+const MEAT_MART_LOCATION_URL =
+  'https://share.google/uWbHPid1cWRHFDvWS'
+
 function App() {
   return (
     <main className="download-page">
-
       {/* Background decoration */}
       <div className="background-circle circle-one" />
       <div className="background-circle circle-two" />
       <div className="background-grid" />
 
       <div className="page-container">
-
-        {/* =========================
-            LEFT BRAND SECTION
-        ========================= */}
+        {/* Left brand section */}
         <section className="brand-section">
-
           <div className="brand-logo">
             <img
               src={skLogo}
@@ -39,7 +39,6 @@ function App() {
           </div>
 
           <div className="brand-content">
-
             <span className="brand-label">
               SK LIVESTOCK & MEAT MART
             </span>
@@ -58,7 +57,6 @@ function App() {
             </p>
 
             <div className="feature-row">
-
               <div className="feature-item">
                 <span className="feature-check">✓</span>
                 <span>Buy & Sell Livestock</span>
@@ -78,25 +76,17 @@ function App() {
                 <span className="feature-check">✓</span>
                 <span>Industry Opportunities</span>
               </div>
-
             </div>
-
           </div>
 
           <p className="brand-footer">
             Livestock & fresh meat, connected digitally.
           </p>
-
         </section>
 
-
-        {/* =========================
-            DOWNLOAD SECTION
-        ========================= */}
+        {/* Download section */}
         <section className="download-section">
-
           <div className="download-panel">
-
             <div className="app-icon">
               <img
                 src={skLogo}
@@ -121,7 +111,6 @@ function App() {
             </p>
 
             <div className="store-buttons">
-
               <a
                 href={APP_STORE_URL}
                 target="_blank"
@@ -147,15 +136,27 @@ function App() {
                   alt="Get it on Google Play"
                 />
               </a>
-
             </div>
+
+            {/* SK Meat Mart location */}
+            <a
+              href={MEAT_MART_LOCATION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="meat-mart-location"
+              aria-label="View SK Meat Mart location on Google Maps"
+            >
+              <img
+                src={googleMapsIcon}
+                alt=""
+                className="meat-mart-location-icon"
+              />
+              <span>Visit SK Meat Mart</span>
+            </a>
 
             <div className="availability">
               <span className="availability-dot" />
-
-              <span>
-                Available for iOS & Android
-              </span>
+              <span>Available for iOS & Android</span>
             </div>
 
             <div className="divider" />
@@ -163,13 +164,9 @@ function App() {
             <p className="safe-download">
               Official SK Livestock & Mart application
             </p>
-
           </div>
-
         </section>
-
       </div>
-
     </main>
   )
 }
